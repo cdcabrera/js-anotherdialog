@@ -7,7 +7,7 @@
 
 <h2>How it works</h2>
 <p>
-    Working on it... but mostly awesomeness’ness.
+    Working on it... but mostly awesomeness, and maybe a bit more 'ness.
 </p>
 
 

@@ -211,7 +211,7 @@
                 }
             });
 
-            _data.dialog.wrap = wrap.get(0),
+            _data.dialog.wrap = wrap.get(0);
             _data.dialog.complete = complete.get(0);
             
             if(_data.previous)
