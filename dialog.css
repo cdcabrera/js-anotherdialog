@@ -1,0 +1,199 @@
+
+
+    html.modal body,
+    html.modal-full body                                    {
+                                                                position:absolute;
+                                                                height:100%;
+                                                                width:100%;
+                                                            }
+
+    div.modal                                               {   display:none; }
+    div.modal *                                             {   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+    html.modal div.modal,
+    html.modal-full div.modal                               {
+                                                                position:relative;
+                                                                /*display:block;*/
+                                                                min-height:100%;
+                                                                width:100%;
+                                                                top:0;
+                                                            }
+
+
+
+    html.modal div.modal .modal-header,
+    html.modal div.modal .modal-footer,
+    html.modal-full div.modal .modal-header,
+    html.modal-full div.modal .modal-footer                 {
+
+                                                                position:relative;
+                                                                width:100%;
+                                                                height:auto;
+                                                                z-index:2;
+                                                            }
+
+
+    html.modal div.modal .modal-header,
+    html.modal-full div.modal .modal-header                 {
+                                                                position:absolute;
+                                                                top:0;
+                                                            }
+
+
+    html.modal div.modal .modal-footer,
+    html.modal-full div.modal .modal-footer                 {
+                                                                position:absolute;
+                                                                bottom:0;
+                                                            }
+
+
+    html.modal div.modal .modal-left,
+    html.modal-full div.modal .modal-left,
+    html.modal div.modal .modal-right,
+    html.modal-full div.modal .modal-right                  {
+                                                                position:absolute;
+                                                                top:0;
+                                                                bottom:0;
+                                                            }
+
+    html.modal div.modal .modal-left,
+    html.modal-full div.modal .modal-left                   {   left:0; }
+
+    html.modal div.modal .modal-right,
+    html.modal-full div.modal .modal-right                  {   right:0; }
+
+
+    /*-- edit colors and padding --*/
+    html.modal div.modal,
+    html.modal-full div.modal                               {   background-color:#ffffff; }
+
+    html.modal div.modal .modal-header,
+    html.modal div.modal .modal-footer,
+    html.modal-full div.modal .modal-header,
+    html.modal-full div.modal .modal-footer                 {   background-color:#e2e2e2; }
+
+    html.modal div.modal .modal-left,
+    html.modal-full div.modal .modal-left,
+    html.modal div.modal .modal-right,
+    html.modal-full div.modal .modal-right                  {   background-color:pink; }
+
+    html.modal div.modal .modal-body,
+    html.modal-full div.modal .modal-body                   {   padding:25px 40px; }
+
+
+
+
+    @media only screen and (max-width:40em)
+    {
+        html.modal body > *,
+        html.modal-full body > *                            {   display:none; }
+
+        /*override plugin defined styles*/
+        html.modal div.modal .modal-inner,
+        html.modal-full div.modal .modal-body               {
+                                                                width:auto !important;
+                                                                height:auto !important;
+                                                                top:inherit !important;
+                                                                left:inherit !important;
+                                                                right:inherit !important;
+                                                                bottom:inherit !important;
+                                                                margin:inherit !important;
+                                                            }
+    }
+
+    @media only screen and (min-width:40em)
+    {
+
+        html.modal body,
+        html.modal-full body                                {   overflow:hidden; }
+
+        html.modal div.modal,
+        html.modal-full body:before                         {
+                                                                position:fixed;
+                                                                height:100%;
+                                                                top:0;
+                                                                bottom:0;
+                                                                left:0;
+                                                                right:0;
+                                                                content:' ';
+                                                                z-index:99;
+                                                                text-align:center;
+                                                                overflow-y:auto;
+                                                            }
+
+        html.modal div.modal:before,
+        html.modal div.modal .modal-inner,
+        html.modal-full div.modal .modal-inner:before,
+        html.modal-full div.modal .modal-body               {
+                                                                position:relative;
+                                                                display:inline-block;
+                                                                vertical-align:middle;
+                                                                text-align:left;
+                                                                overflow:hidden;
+                                                            }
+
+        html.modal div.modal:before,
+        html.modal-full div.modal .modal-inner:before       {
+                                                                height:100%;
+                                                                width:1px;
+                                                                content:' ';
+                                                            }
+
+        html.modal-full div.modal,
+        html.modal-full div.modal .modal-inner              {
+                                                                position:absolute;
+                                                                top:0;
+                                                                bottom:0;
+                                                                left:0;
+                                                                right:0;
+                                                                z-index:100;
+                                                                height:100%;
+                                                            }
+
+
+        html.modal-full div.modal                           {
+                                                                background-color:transparent;
+                                                                text-align:center;
+                                                                overflow-y:auto;
+                                                            }
+
+        html.modal-full div.modal .modal-header,
+        html.modal-full div.modal .modal-footer,
+        html.modal-full div.modal .modal-left,
+        html.modal-full div.modal .modal-right              {
+                                                                position:fixed;
+                                                                text-align:left;
+                                                            }
+
+        html.modal-full div.modal .modal-header             {   top:0; }
+        html.modal-full div.modal .modal-footer             {   bottom:0; }
+
+
+        html.modal div.modal .modal-header                  {   }
+        html.modal div.modal .modal-footer                  {   }
+        html.modal div.modal .modal-body                    {   height:auto; overflow:auto; }
+
+        html.modal-full div.modal .modal-body               {
+                                                                position:static;
+                                                                overflow:auto;
+                                                            }
+
+        /*-- edit colors and height --*/
+
+        html.modal div.modal .modal-inner,
+        html.modal-full div.modal .modal-body               {
+                                                                width:90%;
+                                                                /*height:70%;*/ /*use height when you want to jam it all in there should activate overflow*/
+                                                                min-height:90%;
+                                                                /*max-height:90%;*/
+                                                                background-color:#fff;
+                                                            }
+
+        html.modal div.modal,
+        html.modal-full body:before                         {   background-color:rgba(51,51,51, 0.5); }
+
+
+
+    }
